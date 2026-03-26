@@ -277,52 +277,64 @@
 .news-card__link { align-self: flex-start; margin-top: var(--space-2); }
 
 /* ────────────────────────────────────────────
-   THEMEN STRIP (Horizontaler Foto-Strip wie CDU.de)
+   THEMEN STRIP – Diagonale Trenner (clip-path)
    ─────────────────────────────────────────── */
 .themen-strip {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  height: 420px;
+  display: flex;          /* flex für Überlappung nötig */
   overflow: hidden;
+  height: 420px;
 }
 
+/* Jede Kachel: diagonaler rechter Rand + negativer Abstand zur nächsten */
 .themen-strip__tile {
+  flex: 1 1 0;
   position: relative;
   overflow: hidden;
   display: block;
   text-decoration: none;
   cursor: pointer;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 28px) 100%, 0 100%);
+  margin-right: -22px;
 }
 
+/* Z-Index aufsteigend: rechte Kachel liegt über linker (verdeckt den Diagonal-Schnitt) */
+.themen-strip__tile:nth-child(1) { z-index: 1; }
+.themen-strip__tile:nth-child(2) { z-index: 2; }
+.themen-strip__tile:nth-child(3) { z-index: 3; }
+.themen-strip__tile:nth-child(4) { z-index: 4; }
+.themen-strip__tile:nth-child(5) { z-index: 5; }
+.themen-strip__tile:nth-child(6) {
+  z-index: 6;
+  clip-path: none;   /* letzte Kachel: kein Schnitt */
+  margin-right: 0;
+}
+
+/* Hintergrundbild leicht überstehend damit kein weißer Rand beim Clip entsteht */
 .themen-strip__bg {
   position: absolute;
-  inset: 0;
+  inset: -5px;
   background-size: cover;
   background-position: center;
   transition: transform 0.6s ease;
 }
-
-.themen-strip__tile:hover .themen-strip__bg { transform: scale(1.08); }
+.themen-strip__tile:hover .themen-strip__bg { transform: scale(1.07); }
 
 /* Overlay */
 .themen-strip__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(26,58,74,0.55) 0%, rgba(26,58,74,0.2) 50%, rgba(26,58,74,0.65) 100%);
+  background: linear-gradient(to bottom, rgba(26,58,74,0.52) 0%, rgba(26,58,74,0.18) 50%, rgba(26,58,74,0.68) 100%);
   transition: background var(--transition-base);
+  z-index: 1;
 }
 .themen-strip__tile:hover .themen-strip__overlay {
-  background: linear-gradient(to bottom, rgba(82,183,193,0.5) 0%, rgba(26,58,74,0.1) 40%, rgba(26,58,74,0.7) 100%);
+  background: linear-gradient(to bottom, rgba(82,183,193,0.48) 0%, rgba(26,58,74,0.08) 40%, rgba(26,58,74,0.72) 100%);
 }
 
-/* Trennlinien zwischen Kacheln */
-.themen-strip__tile + .themen-strip__tile { border-left: 1px solid rgba(255,255,255,0.15); }
-
+/* Text-Label oben links */
 .themen-strip__label {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   padding: var(--space-5) var(--space-4);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
@@ -330,25 +342,36 @@
   line-height: var(--line-height-snug);
   z-index: 2;
   transition: color var(--transition-fast);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
 .themen-strip__tile:hover .themen-strip__label { color: var(--color-primary-light); }
 
-/* Einzelne Kachel-Hintergründe (Gradienten als Foto-Ersatz) */
-.themen-strip__tile--1 .themen-strip__bg { background: linear-gradient(160deg, #3a9ca6 0%, #2a5f72 100%); }
-.themen-strip__tile--2 .themen-strip__bg { background: linear-gradient(160deg, #2a7d86 0%, #1a3a4a 100%); }
-.themen-strip__tile--3 .themen-strip__bg { background: linear-gradient(160deg, #52b7c1 0%, #3a9ca6 100%); }
-.themen-strip__tile--4 .themen-strip__bg { background: linear-gradient(160deg, #1a3a4a 0%, #2a5f72 100%); }
-.themen-strip__tile--5 .themen-strip__bg { background: linear-gradient(160deg, #2a5f72 0%, #52b7c1 100%); }
-.themen-strip__tile--6 .themen-strip__bg { background: linear-gradient(160deg, #3a9ca6 0%, #1a3a4a 100%); }
-
-/* Pseudo-Icon je Kachel unten */
+/* Icon unten links */
 .themen-strip__icon {
   position: absolute;
   bottom: var(--space-5);
   left: var(--space-4);
   font-size: 2rem;
   z-index: 2;
-  opacity: 0.85;
+  opacity: 0.9;
+}
+
+/* ── Abwechselnde Bilder: Büro (ungerade) / Polizei (gerade) ── */
+/* STAFF UPDATE: Bilder als assets/images/topic-a.jpg und topic-b.jpg speichern */
+.themen-strip__tile--1 .themen-strip__bg,
+.themen-strip__tile--3 .themen-strip__bg,
+.themen-strip__tile--5 .themen-strip__bg {
+  background-image: url('../assets/images/topic-a.jpg');
+  /* Fallback-Gradient falls Bild fehlt: */
+  background-color: #3a9ca6;
+}
+
+.themen-strip__tile--2 .themen-strip__bg,
+.themen-strip__tile--4 .themen-strip__bg,
+.themen-strip__tile--6 .themen-strip__bg {
+  background-image: url('../assets/images/topic-b.jpg');
+  /* Fallback-Gradient falls Bild fehlt: */
+  background-color: #1a3a4a;
 }
 
 /* ────────────────────────────────────────────

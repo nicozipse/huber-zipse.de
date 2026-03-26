@@ -426,7 +426,8 @@
    ─────────────────────────────────────────── */
 @media (max-width: 1023px) {
   .news-grid { grid-template-columns: repeat(2,1fr); }
-  .themen-strip { grid-template-columns: repeat(3,1fr); height: 340px; }
+  .themen-strip { height: 300px; }
+  .themen-strip__tile { clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%); margin-right: -16px; }
   .blick-grid { grid-template-columns: 1fr; }
   .blick-cards { flex-direction: row; flex-wrap: wrap; }
   .blick-card { flex: 1 1 calc(50% - var(--space-2)); }
@@ -453,7 +454,8 @@
   .site-nav li a { font-size: var(--font-size-lg); padding: var(--space-4); border-radius: var(--radius-md); display: block; }
   .nav-toggle { display: flex; }
   .site-header__cta .btn--outline-header { display: none; }
-  .themen-strip { grid-template-columns: repeat(2,1fr); height: 280px; }
+  .themen-strip { height: 240px; }
+  .themen-strip__tile { clip-path: polygon(0 0, 100% 0, calc(100% - 16px) 100%, 0 100%); margin-right: -12px; }
   .mitmachen-grid { grid-template-columns: 1fr; }
   .footer-main { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; text-align: center; }
@@ -462,7 +464,7 @@
 
 @media (max-width: 639px) {
   .news-grid { grid-template-columns: 1fr; }
-  .themen-strip { grid-template-columns: repeat(2,1fr); height: 260px; }
+  .themen-strip { height: 220px; }
   .hero__actions { flex-direction: column; align-items: flex-start; }
   .site-header__cta .btn { padding: var(--space-2) var(--space-3); font-size: var(--font-size-xs); }
   .blick-card { flex: 1 1 100%; }
