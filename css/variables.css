@@ -1,0 +1,90 @@
+/* ============================================================
+   CDU Enzkreis Pforzheim – Design Tokens
+   variables.css
+   ============================================================ */
+
+:root {
+  /* ─── Brand Colors ─── */
+  --color-primary:        #003880;   /* CDU Blau */
+  --color-primary-dark:   #002660;   /* Hover / Tiefe */
+  --color-primary-light:  #0055B8;   /* Gradient-Endpunkt */
+  --color-accent-teal:    #006B8F;   /* Teal-Akzent / Gradient-Start */
+  --color-cta-gold:       #F5A623;   /* CTA-Buttons Gold/Gelb */
+  --color-cta-gold-dark:  #D4891A;   /* Gold Hover */
+  --color-white:          #FFFFFF;
+  --color-gray-light:     #F5F5F5;   /* Wechselnde Sektionshintergründe */
+  --color-gray-mid:       #E0E0E0;   /* Trennlinien */
+  --color-gray-dark:      #6B6B6B;   /* Sekundärer Text */
+  --color-text:           #1A1A1A;   /* Haupttext */
+  --color-footer-bg:      #0D1B2E;   /* Tiefdunkles Footer-Blau */
+
+  /* ─── Gradienten ─── */
+  --gradient-primary:   linear-gradient(135deg, #006B8F 0%, #003880 100%);
+  --gradient-primary-r: linear-gradient(135deg, #003880 0%, #006B8F 100%);
+  --gradient-hero:      linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.68) 100%);
+  --gradient-section:   linear-gradient(160deg, rgba(0,107,143,0.05) 0%, rgba(0,56,128,0.03) 100%);
+
+  /* ─── Typografie ─── */
+  --font-family:           'Inter', system-ui, -apple-system, sans-serif;
+  --font-size-xs:          0.75rem;    /* 12px */
+  --font-size-sm:          0.875rem;   /* 14px */
+  --font-size-base:        1rem;       /* 16px */
+  --font-size-lg:          1.125rem;   /* 18px */
+  --font-size-xl:          1.25rem;    /* 20px */
+  --font-size-2xl:         1.5rem;     /* 24px */
+  --font-size-3xl:         1.875rem;   /* 30px */
+  --font-size-4xl:         2.25rem;    /* 36px */
+  --font-size-5xl:         3rem;       /* 48px */
+  --font-size-hero:        clamp(2.5rem, 6vw, 4.5rem);
+  --font-weight-regular:   400;
+  --font-weight-medium:    500;
+  --font-weight-bold:      700;
+  --font-weight-extrabold: 800;
+  --line-height-tight:     1.2;
+  --line-height-snug:      1.4;
+  --line-height-base:      1.65;
+
+  /* ─── Spacing (8px-Grid) ─── */
+  --space-1:  0.25rem;   /*  4px */
+  --space-2:  0.5rem;    /*  8px */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-5:  1.25rem;   /* 20px */
+  --space-6:  1.5rem;    /* 24px */
+  --space-8:  2rem;      /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+  --space-20: 5rem;      /* 80px */
+  --space-24: 6rem;      /* 96px */
+
+  /* ─── Layout ─── */
+  --container-max:     1200px;
+  --container-padding: clamp(1rem, 5vw, 2rem);
+  --header-height:     72px;
+  --section-padding:   clamp(3.5rem, 7vw, 6rem);
+
+  /* ─── Border-Radius ─── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-pill: 9999px;
+
+  /* ─── Shadows ─── */
+  --shadow-sm:   0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md:   0 4px 12px rgba(0,0,0,0.10), 0 2px 4px rgba(0,0,0,0.06);
+  --shadow-lg:   0 10px 30px rgba(0,0,0,0.14), 0 4px 8px rgba(0,0,0,0.08);
+  --shadow-card: 0 2px 8px rgba(0,56,128,0.08), 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-card-hover: 0 8px 24px rgba(0,56,128,0.15), 0 3px 8px rgba(0,0,0,0.08);
+
+  /* ─── Übergänge ─── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* ─── Z-Index ─── */
+  --z-header: 100;
+  --z-mobile-nav: 90;
+  --z-overlay: 200;
+}

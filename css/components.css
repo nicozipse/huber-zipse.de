@@ -1,0 +1,542 @@
+/* ============================================================
+   CDU Enzkreis Pforzheim – UI Components
+   components.css
+   ============================================================ */
+
+/* ────────────────────────────────────────────
+   BUTTONS
+   ─────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 2px solid transparent;
+  min-height: 44px; /* WCAG touch target */
+  min-width: 44px;
+  transition: background var(--transition-base),
+              color var(--transition-base),
+              box-shadow var(--transition-base),
+              transform var(--transition-base),
+              border-color var(--transition-base);
+}
+
+.btn:hover { text-decoration: none; }
+
+/* Primary – Blau gefüllt */
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+.btn--primary:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Gold / CTA */
+.btn--gold {
+  background: var(--color-cta-gold);
+  color: var(--color-primary);
+  border-color: var(--color-cta-gold);
+}
+.btn--gold:hover {
+  background: var(--color-cta-gold-dark);
+  border-color: var(--color-cta-gold-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Outline – Blau */
+.btn--outline {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn--outline:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Outline – Weiß (für dunkle Hintergründe) */
+.btn--outline-white {
+  background: transparent;
+  color: var(--color-white);
+  border-color: rgba(255,255,255,0.7);
+}
+.btn--outline-white:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: var(--color-white);
+}
+
+/* Weiß gefüllt */
+.btn--white {
+  background: var(--color-white);
+  color: var(--color-primary);
+  border-color: var(--color-white);
+}
+.btn--white:hover {
+  background: var(--color-gray-light);
+}
+
+/* Größen */
+.btn--sm { padding: var(--space-2) var(--space-4); font-size: var(--font-size-xs); min-height: 36px; }
+.btn--lg { padding: var(--space-4) var(--space-8); font-size: var(--font-size-base); }
+
+/* ────────────────────────────────────────────
+   SECTION TITLES
+   ─────────────────────────────────────────── */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+  position: relative;
+}
+
+.section-header__eyebrow {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-accent-teal);
+  margin-bottom: var(--space-3);
+}
+
+.section-header__title {
+  font-size: clamp(1.75rem, 4vw, var(--font-size-4xl));
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-primary);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-4);
+}
+
+/* Farbvariante für dunkle Hintergründe */
+.section-header--light .section-header__title,
+.section-header--light .section-header__eyebrow {
+  color: var(--color-white);
+}
+.section-header--light .section-header__eyebrow {
+  color: var(--color-cta-gold);
+}
+
+.section-header__subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-dark);
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.section-header--light .section-header__subtitle {
+  color: rgba(255,255,255,0.8);
+}
+
+/* Watermark: großer transparenter Text im Hintergrund */
+.section-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(4rem, 12vw, 9rem);
+  font-weight: var(--font-weight-extrabold);
+  color: rgba(0,56,128,0.04);
+  white-space: nowrap;
+  z-index: 0;
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.section-header--light .section-watermark {
+  color: rgba(255,255,255,0.06);
+}
+
+/* Stellt sicher, dass Titel über Watermark liegt */
+.section-header > *:not(.section-watermark) {
+  position: relative;
+  z-index: 1;
+}
+
+/* ────────────────────────────────────────────
+   NEWS CARDS
+   ─────────────────────────────────────────── */
+.news-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.news-card__media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--color-gray-light);
+}
+.news-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+.news-card:hover .news-card__image {
+  transform: scale(1.04);
+}
+
+/* Fallback wenn kein Bild vorhanden */
+.news-card__media--placeholder {
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.news-card__media--placeholder::after {
+  content: 'CDU';
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.2);
+}
+
+.news-card__category {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  background: var(--color-cta-gold);
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.news-card__body {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--space-3);
+}
+
+.news-card__date {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-dark);
+  font-weight: var(--font-weight-medium);
+}
+
+.news-card__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  line-height: var(--line-height-snug);
+  flex: 1;
+}
+
+.news-card__teaser {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-dark);
+  line-height: var(--line-height-base);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.news-card__link {
+  align-self: flex-start;
+  margin-top: var(--space-2);
+}
+
+/* ────────────────────────────────────────────
+   TOPIC TILES
+   ─────────────────────────────────────────── */
+.topic-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  min-height: 180px;
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), filter var(--transition-base);
+}
+.topic-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  filter: brightness(1.08);
+  text-decoration: none;
+}
+
+/* Subtiles transparentes CDU-Watermark pro Kachel */
+.topic-tile::before {
+  content: 'CDU';
+  position: absolute;
+  bottom: -0.1em;
+  right: -0.05em;
+  font-size: clamp(4rem, 8vw, 6rem);
+  font-weight: 800;
+  color: rgba(255,255,255,0.06);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Farbvarianten */
+.topic-tile--1 { background: linear-gradient(135deg, #006B8F 0%, #003880 100%); }
+.topic-tile--2 { background: linear-gradient(135deg, #0055B8 0%, #003880 100%); }
+.topic-tile--3 { background: linear-gradient(135deg, #005a8e 0%, #002660 100%); }
+.topic-tile--4 { background: linear-gradient(135deg, #007B9E 0%, #004099 100%); }
+.topic-tile--5 { background: linear-gradient(135deg, #004F9F 0%, #003060 100%); }
+.topic-tile--6 { background: linear-gradient(135deg, #003880 0%, #006B8F 100%); }
+
+.topic-tile__icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+.topic-tile__label {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+}
+
+/* ────────────────────────────────────────────
+   EVENT ITEMS
+   ─────────────────────────────────────────── */
+.event-item {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: var(--space-5);
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-card);
+  border-left: 4px solid var(--color-cta-gold);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.event-item:hover {
+  transform: translateX(3px);
+  box-shadow: var(--shadow-md);
+}
+
+.event-item__date-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-2);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.event-item__day {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1;
+  display: block;
+}
+
+.event-item__month {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: var(--font-weight-bold);
+  display: block;
+  margin-top: 2px;
+  color: rgba(255,255,255,0.8);
+}
+
+.event-item__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.event-item__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  line-height: var(--line-height-snug);
+}
+
+.event-item__meta {
+  font-size: var(--font-size-sm);
+  color: var(--color-accent-teal);
+  font-weight: var(--font-weight-medium);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.event-item__teaser {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-dark);
+  margin-top: var(--space-1);
+  margin-bottom: 0;
+}
+
+/* ────────────────────────────────────────────
+   CANDIDATE CARDS
+   ─────────────────────────────────────────── */
+.candidate-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.candidate-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.candidate-card__photo-wrap {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto var(--space-5);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--color-primary);
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.candidate-card__photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.candidate-card__photo-wrap--placeholder {
+  font-size: var(--font-size-4xl);
+  font-weight: 800;
+  color: rgba(255,255,255,0.35);
+}
+
+.candidate-card__name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
+}
+
+.candidate-card__role {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent-teal);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-3);
+}
+
+.candidate-card__bio {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-dark);
+  line-height: var(--line-height-base);
+  margin-bottom: 0;
+}
+
+/* ────────────────────────────────────────────
+   FORM ELEMENTS
+   ─────────────────────────────────────────── */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.form-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.form-control {
+  padding: var(--space-3) var(--space-4);
+  border: 2px solid var(--color-gray-mid);
+  border-radius: var(--radius-md);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  background: var(--color-white);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  width: 100%;
+  min-height: 44px;
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0,56,128,0.12);
+  outline: none;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ────────────────────────────────────────────
+   BADGES / TAGS
+   ─────────────────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.badge--primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.badge--gold {
+  background: var(--color-cta-gold);
+  color: var(--color-primary);
+}
+
+/* ────────────────────────────────────────────
+   DIVIDER
+   ─────────────────────────────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-gray-mid);
+  margin-block: var(--space-4);
+}
