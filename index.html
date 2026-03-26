@@ -4,15 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="CDU Enzkreis Pforzheim – Gemeinsam für unsere Region. Aktuelles, Termine und Informationen zur CDU im Enzkreis und in Pforzheim.">
-  <meta name="theme-color" content="#003880">
+  <meta name="theme-color" content="#52b7c1">
   <title>CDU Enzkreis Pforzheim</title>
 
-  <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
@@ -20,48 +18,36 @@
 </head>
 <body>
 
-  <!-- WCAG 2.4.1: Skip Navigation -->
   <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
 
-  <!-- ═══════════════════════════════════════════
-       HEADER
-       ═══════════════════════════════════════════ -->
+  <!-- ═══ HEADER ═══ -->
   <header class="site-header" role="banner">
     <div class="container">
 
-      <!-- Logo: rein typografisch, kein Bild erforderlich -->
       <a href="/" class="site-logo" aria-label="CDU Enzkreis Pforzheim – Startseite">
         <span class="site-logo__cdu" aria-hidden="true">CDU</span>
         <span class="site-logo__region">Enzkreis<br>Pforzheim</span>
       </a>
 
-      <!-- Hauptnavigation -->
       <nav class="site-nav-wrapper" aria-label="Hauptnavigation">
-        <button
-          class="nav-toggle"
-          aria-controls="primary-nav"
-          aria-expanded="false"
-          aria-label="Menü öffnen"
-        >
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Menü öffnen">
           <span class="nav-toggle__bar"></span>
           <span class="nav-toggle__bar"></span>
           <span class="nav-toggle__bar"></span>
         </button>
-
         <ul class="site-nav" id="primary-nav" role="list">
           <li><a href="#aktuelles">Aktuelles</a></li>
           <li><a href="#themen">Themen</a></li>
-          <li><a href="#auf-einen-blick">Auf einen Blick</a></li>
+          <li><a href="#auf-einen-blick">Überblick</a></li>
           <li><a href="#termine">Termine</a></li>
           <li><a href="#ueber-uns">Über uns</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </nav>
 
-      <!-- CTA Buttons (getrennt vom Menü, wie CDU-Hauptseite) -->
       <div class="site-header__cta" role="group" aria-label="Aktionsschaltflächen">
-        <a href="#mitmachen" class="btn btn--gold">Spenden</a>
-        <a href="#mitmachen" class="btn btn--outline-white">Mitglied werden</a>
+        <a href="#mitmachen" class="btn btn--primary btn--sm">Spenden</a>
+        <a href="#mitmachen" class="btn btn--outline-header btn--sm">Mitglied werden</a>
       </div>
 
     </div>
@@ -69,54 +55,38 @@
 
   <main id="main-content">
 
-    <!-- ═══════════════════════════════════════════
-         HERO
-         ═══════════════════════════════════════════ -->
+    <!-- ═══ HERO ═══ -->
     <section class="hero" aria-labelledby="hero-heading">
-
-      <!-- STAFF UPDATE: Ersetze assets/images/hero-bg.jpg mit deinem Wunschbild (gleicher Dateiname) -->
-      <div
-        class="hero__bg"
-        role="img"
-        aria-label="CDU Enzkreis Pforzheim – Hintergrundbild"
-      ></div>
+      <!-- STAFF UPDATE: assets/images/hero-bg.jpg ersetzen -->
+      <div class="hero__bg" role="img" aria-label="CDU Enzkreis Pforzheim Hintergrundbild"></div>
       <div class="hero__overlay" aria-hidden="true"></div>
-
-      <!-- Dekoratives CDU-Wasserzeichen, für Screenreader unsichtbar -->
+      <div class="hero__pattern" aria-hidden="true"></div>
       <span class="hero__watermark" aria-hidden="true">CDU</span>
 
       <div class="container">
         <div class="hero__content">
-
-          <!-- STAFF UPDATE: Eyebrow, Headline und Subheadline hier anpassen -->
+          <!-- STAFF UPDATE: Headline und Subheadline hier anpassen -->
           <p class="hero__eyebrow">CDU Enzkreis Pforzheim</p>
-
           <h1 id="hero-heading" class="hero__headline">
             Gemeinsam für<br>unsere Heimat
           </h1>
-
           <p class="hero__subheadline">
             Wir setzen uns für Sicherheit, Wohlstand und Zusammenhalt
             im Enzkreis und in Pforzheim ein. Stark vor Ort –
             mit Erfahrung und Engagement.
           </p>
-
           <div class="hero__actions">
-            <a href="#aktuelles" class="btn btn--gold btn--lg">Aktuelles entdecken</a>
+            <a href="#aktuelles" class="btn btn--primary btn--lg">Aktuelles entdecken</a>
             <a href="#mitmachen" class="btn btn--outline-white btn--lg">Mitglied werden</a>
           </div>
-
         </div>
       </div>
 
       <div class="hero__scroll-hint" aria-hidden="true">Scrollen</div>
-
     </section>
 
 
-    <!-- ═══════════════════════════════════════════
-         AKTUELLE BEITRÄGE
-         ═══════════════════════════════════════════ -->
+    <!-- ═══ AKTUELLE BEITRÄGE ═══ -->
     <section id="aktuelles" class="section" aria-labelledby="aktuelles-heading">
       <div class="container">
 
@@ -124,14 +94,12 @@
           <span aria-hidden="true" class="section-watermark">AKTUELLES</span>
           <span class="section-header__eyebrow">Neuigkeiten</span>
           <h2 id="aktuelles-heading" class="section-header__title">Aktuelle Beiträge</h2>
-          <p class="section-header__subtitle">
-            Bleiben Sie informiert über die Arbeit der CDU Enzkreis Pforzheim.
-          </p>
+          <p class="section-header__subtitle">Bleiben Sie informiert über die Arbeit der CDU Enzkreis Pforzheim.</p>
         </div>
 
         <div class="news-grid">
 
-          <!-- STAFF UPDATE: News 1 – Bild (src), Kategorie, Datum, Titel und Text anpassen -->
+          <!-- STAFF UPDATE: News 1 – Kategorie, Datum, Titel und Text anpassen -->
           <article class="news-card">
             <figure class="news-card__media" aria-hidden="true">
               <div class="news-card__media--placeholder"></div>
@@ -139,13 +107,11 @@
             </figure>
             <div class="news-card__body">
               <time class="news-card__date" datetime="2026-03-20">20. März 2026</time>
-              <h3 class="news-card__title">
-                Starkes Ergebnis für die CDU bei der Gemeinderatswahl
-              </h3>
+              <h3 class="news-card__title">Starkes Ergebnis für die CDU bei der Gemeinderatswahl</h3>
               <p class="news-card__teaser">
-                Die CDU Enzkreis erzielt ein hervorragendes Ergebnis und übernimmt
-                erneut Verantwortung für die Menschen in unserer Region. Wir bedanken
-                uns bei allen Wählerinnen und Wählern.
+                Die CDU Enzkreis erzielt ein hervorragendes Ergebnis und übernimmt erneut
+                Verantwortung für die Menschen in unserer Region. Wir bedanken uns bei
+                allen Wählerinnen und Wählern.
               </p>
               <a href="#" class="news-card__link btn btn--outline btn--sm">Weiterlesen →</a>
             </div>
@@ -159,12 +125,10 @@
             </figure>
             <div class="news-card__body">
               <time class="news-card__date" datetime="2026-03-15">15. März 2026</time>
-              <h3 class="news-card__title">
-                Neue Arbeitsplätze durch Ansiedlung im Gewerbegebiet Nord
-              </h3>
+              <h3 class="news-card__title">Neue Arbeitsplätze durch Ansiedlung im Gewerbegebiet Nord</h3>
               <p class="news-card__teaser">
-                Durch die Initiative der CDU-Fraktion im Kreistag konnten wichtige
-                Weichen für die wirtschaftliche Entwicklung im Enzkreis gestellt werden.
+                Durch die Initiative der CDU-Fraktion im Kreistag konnten wichtige Weichen
+                für die wirtschaftliche Entwicklung im Enzkreis gestellt werden.
                 Rund 200 neue Stellen entstehen.
               </p>
               <a href="#" class="news-card__link btn btn--outline btn--sm">Weiterlesen →</a>
@@ -179,13 +143,11 @@
             </figure>
             <div class="news-card__body">
               <time class="news-card__date" datetime="2026-03-10">10. März 2026</time>
-              <h3 class="news-card__title">
-                CDU setzt sich für moderne Schulinfrastruktur ein
-              </h3>
+              <h3 class="news-card__title">CDU setzt sich für moderne Schulinfrastruktur ein</h3>
               <p class="news-card__teaser">
                 Investitionen in Bildung sind Investitionen in die Zukunft. Die CDU
                 Enzkreis Pforzheim hat im Kreistag einen Antrag für die Digitalisierung
-                aller Schulen beschlossen.
+                aller Schulen eingebracht und beschlossen.
               </p>
               <a href="#" class="news-card__link btn btn--outline btn--sm">Weiterlesen →</a>
             </div>
@@ -201,56 +163,68 @@
     </section>
 
 
-    <!-- ═══════════════════════════════════════════
-         UNSERE THEMEN
-         ═══════════════════════════════════════════ -->
+    <!-- ═══ UNSERE THEMEN (Horizontaler Foto-Strip) ═══ -->
     <section id="themen" class="section" aria-labelledby="themen-heading">
       <div class="container">
-
-        <div class="section-header">
+        <div class="section-header section-header--light">
           <span aria-hidden="true" class="section-watermark">THEMEN</span>
           <span class="section-header__eyebrow">Was uns bewegt</span>
           <h2 id="themen-heading" class="section-header__title">Unsere Themen</h2>
-          <p class="section-header__subtitle">
-            Sechs Kernthemen, für die wir uns täglich einsetzen.
-          </p>
+          <p class="section-header__subtitle">Sechs Schwerpunkte, für die wir uns täglich einsetzen.</p>
         </div>
+      </div>
 
-        <!-- STAFF UPDATE: Kacheln – Label und href nach Bedarf anpassen -->
-        <div class="topics-grid">
-          <a href="#" class="topic-tile topic-tile--1">
-            <span class="topic-tile__icon" aria-hidden="true">🏘️</span>
-            <span class="topic-tile__label">Wohnen &amp; Infrastruktur</span>
-          </a>
-          <a href="#" class="topic-tile topic-tile--2">
-            <span class="topic-tile__icon" aria-hidden="true">💼</span>
-            <span class="topic-tile__label">Wirtschaft &amp; Arbeit</span>
-          </a>
-          <a href="#" class="topic-tile topic-tile--3">
-            <span class="topic-tile__icon" aria-hidden="true">🎓</span>
-            <span class="topic-tile__label">Bildung &amp; Familie</span>
-          </a>
-          <a href="#" class="topic-tile topic-tile--4">
-            <span class="topic-tile__icon" aria-hidden="true">🌿</span>
-            <span class="topic-tile__label">Umwelt &amp; Klimaschutz</span>
-          </a>
-          <a href="#" class="topic-tile topic-tile--5">
-            <span class="topic-tile__icon" aria-hidden="true">🛡️</span>
-            <span class="topic-tile__label">Sicherheit &amp; Ordnung</span>
-          </a>
-          <a href="#" class="topic-tile topic-tile--6">
-            <span class="topic-tile__icon" aria-hidden="true">🤝</span>
-            <span class="topic-tile__label">Ehrenamt &amp; Gemeinschaft</span>
-          </a>
-        </div>
+      <!-- Volle Breite, kein Container -->
+      <!-- STAFF UPDATE: Labels und href-Links der Kacheln anpassen -->
+      <div class="themen-strip" role="list">
+
+        <a href="#" class="themen-strip__tile themen-strip__tile--1" role="listitem">
+          <div class="themen-strip__bg" aria-hidden="true"></div>
+          <div class="themen-strip__overlay" aria-hidden="true"></div>
+          <span class="themen-strip__label">Wohnen &amp; Infrastruktur</span>
+          <span class="themen-strip__icon" aria-hidden="true">🏘️</span>
+        </a>
+
+        <a href="#" class="themen-strip__tile themen-strip__tile--2" role="listitem">
+          <div class="themen-strip__bg" aria-hidden="true"></div>
+          <div class="themen-strip__overlay" aria-hidden="true"></div>
+          <span class="themen-strip__label">Wirtschaft &amp; Arbeit</span>
+          <span class="themen-strip__icon" aria-hidden="true">💼</span>
+        </a>
+
+        <a href="#" class="themen-strip__tile themen-strip__tile--3" role="listitem">
+          <div class="themen-strip__bg" aria-hidden="true"></div>
+          <div class="themen-strip__overlay" aria-hidden="true"></div>
+          <span class="themen-strip__label">Bildung &amp; Familie</span>
+          <span class="themen-strip__icon" aria-hidden="true">🎓</span>
+        </a>
+
+        <a href="#" class="themen-strip__tile themen-strip__tile--4" role="listitem">
+          <div class="themen-strip__bg" aria-hidden="true"></div>
+          <div class="themen-strip__overlay" aria-hidden="true"></div>
+          <span class="themen-strip__label">Sicherheit &amp; Ordnung</span>
+          <span class="themen-strip__icon" aria-hidden="true">🛡️</span>
+        </a>
+
+        <a href="#" class="themen-strip__tile themen-strip__tile--5" role="listitem">
+          <div class="themen-strip__bg" aria-hidden="true"></div>
+          <div class="themen-strip__overlay" aria-hidden="true"></div>
+          <span class="themen-strip__label">Umwelt &amp; Klimaschutz</span>
+          <span class="themen-strip__icon" aria-hidden="true">🌿</span>
+        </a>
+
+        <a href="#" class="themen-strip__tile themen-strip__tile--6" role="listitem">
+          <div class="themen-strip__bg" aria-hidden="true"></div>
+          <div class="themen-strip__overlay" aria-hidden="true"></div>
+          <span class="themen-strip__label">Ehrenamt &amp; Gemeinschaft</span>
+          <span class="themen-strip__icon" aria-hidden="true">🤝</span>
+        </a>
 
       </div>
     </section>
 
 
-    <!-- ═══════════════════════════════════════════
-         AUF EINEN BLICK (Highlight mit Gradient-Hintergrund)
-         ═══════════════════════════════════════════ -->
+    <!-- ═══ AUF EINEN BLICK ═══ -->
     <section id="auf-einen-blick" class="section" aria-labelledby="blick-heading">
       <div class="container">
 
@@ -262,46 +236,31 @@
 
         <div class="blick-grid">
 
-          <!-- Linke Seite: Video-Placeholder -->
-          <!-- STAFF UPDATE: video-url als href oder iframe ersetzen -->
+          <!-- STAFF UPDATE: Video-URL / iframe einsetzen -->
           <div class="blick-video">
-            <div class="blick-video__placeholder" style="background: rgba(0,40,100,0.6); width:100%; height:100%;"></div>
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,rgba(26,58,74,0.8),rgba(82,183,193,0.4));position:absolute;inset:0;"></div>
             <button class="blick-video__play" aria-label="Video abspielen">
               <span class="blick-video__play-icon" aria-hidden="true"></span>
             </button>
           </div>
 
-          <!-- Rechte Seite: Content-Cards -->
-          <!-- STAFF UPDATE: Titel, Text und Links der Karten anpassen -->
+          <!-- STAFF UPDATE: Kachel-Titel und Links anpassen -->
           <div class="blick-cards">
-
             <div class="blick-card">
               <p class="blick-card__title">Unser Kreisverband stellt sich vor</p>
-              <p class="blick-card__teaser">
-                Lernen Sie die Menschen kennen, die sich täglich für Enzkreis und
-                Pforzheim einsetzen.
-              </p>
+              <p class="blick-card__teaser">Lernen Sie die Menschen kennen, die sich täglich für Enzkreis und Pforzheim einsetzen.</p>
               <a href="#ueber-uns" class="blick-card__link">Mehr erfahren</a>
             </div>
-
             <div class="blick-card">
               <p class="blick-card__title">Unser Programm für die Region</p>
-              <p class="blick-card__teaser">
-                Konkrete Maßnahmen für Wirtschaft, Bildung und Lebensqualität
-                im Enzkreis und in Pforzheim.
-              </p>
+              <p class="blick-card__teaser">Konkrete Maßnahmen für Wirtschaft, Bildung und Lebensqualität im Enzkreis und in Pforzheim.</p>
               <a href="#" class="blick-card__link">Programm lesen</a>
             </div>
-
             <div class="blick-card">
               <p class="blick-card__title">CDU im Kreistag – unsere Arbeit</p>
-              <p class="blick-card__teaser">
-                Wir berichten regelmäßig über Anträge, Beschlüsse und Initiativen
-                der CDU-Fraktion im Kreistag.
-              </p>
+              <p class="blick-card__teaser">Wir berichten regelmäßig über Anträge, Beschlüsse und Initiativen der CDU-Fraktion.</p>
               <a href="#aktuelles" class="blick-card__link">Berichte lesen</a>
             </div>
-
           </div>
         </div>
 
@@ -309,9 +268,7 @@
     </section>
 
 
-    <!-- ═══════════════════════════════════════════
-         TERMINE
-         ═══════════════════════════════════════════ -->
+    <!-- ═══ TERMINE ═══ -->
     <section id="termine" class="section" aria-labelledby="termine-heading">
       <div class="container">
 
@@ -323,94 +280,64 @@
 
         <div class="events-layout">
 
-          <!-- Terminliste -->
           <!-- STAFF UPDATE: Termine – Tag, Monat, Titel, Ort, Zeit und Beschreibung anpassen -->
           <div class="events-list">
 
             <article class="event-item">
-              <div class="event-item__date-block" aria-label="Datum: 8. April">
+              <div class="event-item__date-block" aria-label="8. April">
                 <span class="event-item__day">08</span>
                 <span class="event-item__month">Apr</span>
               </div>
               <div class="event-item__content">
                 <h3 class="event-item__title">Kreisparteitag CDU Enzkreis Pforzheim</h3>
-                <p class="event-item__meta">
-                  <span>📍 Stadthalle Pforzheim</span>
-                  <span>18:00 Uhr</span>
-                </p>
-                <p class="event-item__teaser">
-                  Jahreshauptversammlung mit Neuwahl des Kreisvorstandes und
-                  Diskussion des Kreisprogramms.
-                </p>
+                <p class="event-item__meta"><span>📍 Stadthalle Pforzheim</span><span>18:00 Uhr</span></p>
+                <p class="event-item__teaser">Jahreshauptversammlung mit Neuwahl des Kreisvorstandes und Diskussion des Kreisprogramms.</p>
               </div>
             </article>
 
             <article class="event-item">
-              <div class="event-item__date-block" aria-label="Datum: 22. April">
+              <div class="event-item__date-block" aria-label="22. April">
                 <span class="event-item__day">22</span>
                 <span class="event-item__month">Apr</span>
               </div>
               <div class="event-item__content">
                 <h3 class="event-item__title">CDU Bürgergespräch: Sicherheit in Pforzheim</h3>
-                <p class="event-item__meta">
-                  <span>📍 Bürgerhaus Arlinger</span>
-                  <span>19:30 Uhr</span>
-                </p>
-                <p class="event-item__teaser">
-                  Offene Diskussionsrunde zum Thema Innere Sicherheit und
-                  Kriminalitätsprävention mit Experten.
-                </p>
+                <p class="event-item__meta"><span>📍 Bürgerhaus Arlinger</span><span>19:30 Uhr</span></p>
+                <p class="event-item__teaser">Offene Diskussionsrunde zum Thema Innere Sicherheit und Kriminalitätsprävention mit Experten.</p>
               </div>
             </article>
 
             <article class="event-item">
-              <div class="event-item__date-block" aria-label="Datum: 10. Mai">
+              <div class="event-item__date-block" aria-label="10. Mai">
                 <span class="event-item__day">10</span>
                 <span class="event-item__month">Mai</span>
               </div>
               <div class="event-item__content">
                 <h3 class="event-item__title">Wirtschaftsgespräch mit Unternehmern</h3>
-                <p class="event-item__meta">
-                  <span>📍 IHK Nordschwarzwald, Pforzheim</span>
-                  <span>17:00 Uhr</span>
-                </p>
-                <p class="event-item__teaser">
-                  Austausch mit regionalen Unternehmerinnen und Unternehmern
-                  über wirtschaftspolitische Herausforderungen.
-                </p>
+                <p class="event-item__meta"><span>📍 IHK Nordschwarzwald</span><span>17:00 Uhr</span></p>
+                <p class="event-item__teaser">Austausch mit regionalen Unternehmern über wirtschaftspolitische Herausforderungen.</p>
               </div>
             </article>
 
             <article class="event-item">
-              <div class="event-item__date-block" aria-label="Datum: 27. April">
+              <div class="event-item__date-block" aria-label="27. April">
                 <span class="event-item__day">27</span>
                 <span class="event-item__month">Apr</span>
               </div>
               <div class="event-item__content">
                 <h3 class="event-item__title">CDU-Stammtisch Mühlacker</h3>
-                <p class="event-item__meta">
-                  <span>📍 Gasthaus Krone, Mühlacker</span>
-                  <span>20:00 Uhr</span>
-                </p>
-                <p class="event-item__teaser">
-                  Monatlicher Stammtisch für Mitglieder und Interessierte –
-                  alle sind herzlich willkommen.
-                </p>
+                <p class="event-item__meta"><span>📍 Gasthaus Krone, Mühlacker</span><span>20:00 Uhr</span></p>
+                <p class="event-item__teaser">Monatlicher Stammtisch für Mitglieder und Interessierte – alle herzlich willkommen.</p>
               </div>
             </article>
 
           </div>
 
-          <!-- Sidebar -->
           <aside class="events-sidebar">
-            <h3 class="events-sidebar__title">Immer auf dem Laufenden</h3>
-            <p class="events-sidebar__text">
-              Verpassen Sie keine Veranstaltung der CDU Enzkreis Pforzheim.
-              Abonnieren Sie unseren Newsletter oder folgen Sie uns in den
-              sozialen Medien.
-            </p>
-            <a href="#kontakt" class="btn btn--primary" style="margin-bottom: var(--space-3); display: block; text-align: center;">Newsletter anmelden</a>
-            <a href="#" class="btn btn--outline" style="display: block; text-align: center;">Alle Termine anzeigen</a>
+            <h3 class="events-sidebar__title">Immer informiert</h3>
+            <p class="events-sidebar__text">Verpassen Sie keine Veranstaltung der CDU Enzkreis Pforzheim. Newsletter oder Social Media.</p>
+            <a href="#kontakt" class="btn btn--primary" style="margin-bottom:var(--space-3);display:block;text-align:center;">Newsletter anmelden</a>
+            <a href="#" class="btn btn--outline" style="display:block;text-align:center;">Alle Termine</a>
           </aside>
 
         </div>
@@ -419,10 +346,8 @@
     </section>
 
 
-    <!-- ═══════════════════════════════════════════
-         ÜBER UNS / KANDIDATEN
-         ═══════════════════════════════════════════ -->
-    <section id="ueber-uns" class="section bg-section-alt" aria-labelledby="ueber-uns-heading">
+    <!-- ═══ ÜBER UNS ═══ -->
+    <section id="ueber-uns" class="section" aria-labelledby="ueber-uns-heading">
       <div class="container">
 
         <div class="section-header">
@@ -431,161 +356,108 @@
           <h2 id="ueber-uns-heading" class="section-header__title">Über uns</h2>
         </div>
 
-        <!-- Intro-Text + Statistiken -->
         <div class="about-layout">
-
           <div>
             <span class="about-intro__label">Unser Kreisverband</span>
-            <h3 class="about-intro__title">
-              Mit Herz und<br>Verstand für die Region
-            </h3>
+            <h3 class="about-intro__title">Mit Herz und Verstand für die Region</h3>
           </div>
-
           <div>
-            <!-- STAFF UPDATE: Beschreibungstext anpassen -->
-            <p class="about-intro__text">
-              Die CDU Enzkreis Pforzheim ist der starke politische Partner für alle
-              Menschen in unserer Region. Mit über 1.200 Mitgliedern und engagierten
-              Mandatsträgern in Gemeinde- und Kreistag setzen wir uns täglich für
-              eine lebens- und liebenswerte Heimat ein.
-            </p>
-            <p class="about-intro__text">
-              Unsere Wurzeln reichen tief in die Bürgergesellschaft. Wir verbinden
-              christlich-soziale Werte mit einer pragmatischen, lösungsorientierten
-              Politik für Enzkreis und Pforzheim.
-            </p>
-
-            <!-- STAFF UPDATE: Zahlen aktualisieren -->
+            <!-- STAFF UPDATE: Text, Zahlen anpassen -->
+            <p class="about-intro__text">Die CDU Enzkreis Pforzheim ist der starke politische Partner für alle Menschen in unserer Region. Mit über 1.200 Mitgliedern und engagierten Mandatsträgern in Gemeinde- und Kreistag setzen wir uns täglich für eine lebens- und liebenswerte Heimat ein.</p>
+            <p class="about-intro__text">Unsere Wurzeln reichen tief in die Bürgergesellschaft. Wir verbinden christlich-soziale Werte mit einer pragmatischen, lösungsorientierten Politik für Enzkreis und Pforzheim.</p>
             <div class="about-stats">
-              <div>
-                <span class="about-stat__number">1.200+</span>
-                <span class="about-stat__label">Mitglieder</span>
-              </div>
-              <div>
-                <span class="about-stat__number">47</span>
-                <span class="about-stat__label">Mandatsträger</span>
-              </div>
-              <div>
-                <span class="about-stat__number">18</span>
-                <span class="about-stat__label">Ortsverbände</span>
-              </div>
+              <div><span class="about-stat__number">1.200+</span><span class="about-stat__label">Mitglieder</span></div>
+              <div><span class="about-stat__number">47</span><span class="about-stat__label">Mandatsträger</span></div>
+              <div><span class="about-stat__number">18</span><span class="about-stat__label">Ortsverbände</span></div>
             </div>
           </div>
-
         </div>
 
-        <!-- Kandidaten / Team -->
-        <!-- STAFF UPDATE: Namen, Funktionen und Fotos der Personen anpassen -->
+        <!-- STAFF UPDATE: Namen, Funktionen, Initialen anpassen – Fotos via <img> einsetzen -->
         <div class="candidates-grid">
-
           <div class="candidate-card">
-            <div class="candidate-card__photo-wrap candidate-card__photo-wrap--placeholder" aria-hidden="true">
-              <!-- STAFF UPDATE: <img src="assets/images/candidate-1.jpg" alt="Foto von [Name]"> einsetzen -->
-              MK
-            </div>
+            <div class="candidate-card__photo-wrap candidate-card__photo-wrap--placeholder" aria-hidden="true">MK</div>
             <h3 class="candidate-card__name">Max Mustermann</h3>
             <p class="candidate-card__role">Kreisvorsitzender</p>
-            <p class="candidate-card__bio">
-              Seit 2018 Kreisvorsitzender, Mitglied des Kreistags und
-              leidenschaftlicher Vertreter der Interessen im Enzkreis.
-            </p>
+            <p class="candidate-card__bio">Seit 2018 Kreisvorsitzender, Mitglied des Kreistags und leidenschaftlicher Vertreter der Interessen im Enzkreis.</p>
           </div>
-
           <div class="candidate-card">
-            <div class="candidate-card__photo-wrap candidate-card__photo-wrap--placeholder" aria-hidden="true">
-              EF
-            </div>
+            <div class="candidate-card__photo-wrap candidate-card__photo-wrap--placeholder" aria-hidden="true">EF</div>
             <h3 class="candidate-card__name">Erika Förster</h3>
             <p class="candidate-card__role">Stellv. Kreisvorsitzende</p>
-            <p class="candidate-card__bio">
-              Engagiert in der Familienpolitik und Bildung, Gemeinderätin
-              in Mühlacker seit 2014.
-            </p>
+            <p class="candidate-card__bio">Engagiert in der Familienpolitik und Bildung, Gemeinderätin in Mühlacker seit 2014.</p>
           </div>
-
           <div class="candidate-card">
-            <div class="candidate-card__photo-wrap candidate-card__photo-wrap--placeholder" aria-hidden="true">
-              TS
-            </div>
+            <div class="candidate-card__photo-wrap candidate-card__photo-wrap--placeholder" aria-hidden="true">TS</div>
             <h3 class="candidate-card__name">Thomas Schneider</h3>
-            <p class="candidate-card__role">Fraktionsvorsitzender Kreistag</p>
-            <p class="candidate-card__bio">
-              Wirtschaftspolitischer Sprecher, Unternehmer und Stadtrat
-              in Pforzheim.
-            </p>
+            <p class="candidate-card__role">Fraktionsvorsitzender</p>
+            <p class="candidate-card__bio">Wirtschaftspolitischer Sprecher, Unternehmer und Stadtrat in Pforzheim.</p>
           </div>
-
           <div class="candidate-card">
-            <div class="candidate-card__photo-wrap candidate-card__photo-wrap--placeholder" aria-hidden="true">
-              AW
-            </div>
+            <div class="candidate-card__photo-wrap candidate-card__photo-wrap--placeholder" aria-hidden="true">AW</div>
             <h3 class="candidate-card__name">Anna Weber</h3>
-            <p class="candidate-card__role">Kreisvorsitzende Junge Union</p>
-            <p class="candidate-card__bio">
-              Stimme der jungen Generation in der CDU Enzkreis,
-              aktiv in Schul- und Umweltpolitik.
-            </p>
+            <p class="candidate-card__role">Junge Union</p>
+            <p class="candidate-card__bio">Stimme der jungen Generation, aktiv in Schul- und Umweltpolitik.</p>
           </div>
-
         </div>
 
       </div>
     </section>
 
 
-    <!-- ═══════════════════════════════════════════
-         MITMACHEN / CTA
-         ═══════════════════════════════════════════ -->
+    <!-- ═══ BRAND STRIP (neues Element, inspiriert von CDU.de) ═══ -->
+    <section class="brand-strip" aria-labelledby="brand-strip-heading">
+      <div class="brand-strip__pattern" aria-hidden="true"></div>
+      <div class="container">
+        <!-- STAFF UPDATE: Claim-Text anpassen -->
+        <p class="brand-strip__eyebrow">CDU Enzkreis Pforzheim</p>
+        <h2 id="brand-strip-heading" class="brand-strip__title">Verantwortung verpflichtet.</h2>
+        <p class="brand-strip__sub">
+          Wir gestalten die Zukunft unserer Region mit Mut, Erfahrung und dem Willen zur Veränderung.
+          Werden Sie Teil unserer Gemeinschaft.
+        </p>
+        <div class="brand-strip__actions">
+          <a href="#mitmachen" class="btn btn--primary btn--lg">Jetzt aktiv werden</a>
+          <a href="#kontakt" class="btn btn--outline-white btn--lg">Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══ MITMACHEN ═══ -->
     <section id="mitmachen" class="section" aria-labelledby="mitmachen-heading">
       <div class="container">
 
-        <div class="section-header section-header--light">
-          <span aria-hidden="true" class="section-watermark">CDU</span>
+        <div class="section-header">
+          <span aria-hidden="true" class="section-watermark">MITMACHEN</span>
           <span class="section-header__eyebrow">Werden Sie aktiv</span>
           <h2 id="mitmachen-heading" class="section-header__title">Mitmachen</h2>
-          <p class="section-header__subtitle">
-            Gestalten Sie die Zukunft unserer Region mit.
-          </p>
+          <p class="section-header__subtitle">Gestalten Sie die Zukunft unserer Region mit.</p>
         </div>
 
         <div class="mitmachen-grid">
-
-          <!-- Mitglied werden -->
           <div class="mitmachen-card">
             <span class="mitmachen-card__icon" aria-hidden="true">🤝</span>
             <h3 class="mitmachen-card__title">Mitglied werden</h3>
-            <p class="mitmachen-card__text">
-              Als CDU-Mitglied gestalten Sie aktiv die Politik in Ihrem
-              Wohnort mit. Über 1.200 Menschen im Enzkreis haben diesen
-              Schritt bereits getan – werden Sie Teil unserer Gemeinschaft.
-            </p>
-            <!-- STAFF UPDATE: Link zur Mitgliedschafts-Seite/Formular anpassen -->
-            <a href="#kontakt" class="btn btn--gold btn--lg">Jetzt Mitglied werden</a>
+            <p class="mitmachen-card__text">Als CDU-Mitglied gestalten Sie aktiv die Politik in Ihrem Wohnort mit. Über 1.200 Menschen im Enzkreis haben diesen Schritt bereits getan – werden Sie Teil unserer Gemeinschaft.</p>
+            <!-- STAFF UPDATE: Link zur Mitgliedschafts-Seite anpassen -->
+            <a href="#kontakt" class="btn btn--primary btn--lg">Jetzt Mitglied werden</a>
           </div>
-
-          <!-- Spenden -->
           <div class="mitmachen-card">
-            <span class="mitmachen-card__icon" aria-hidden="true">💛</span>
+            <span class="mitmachen-card__icon" aria-hidden="true">💙</span>
             <h3 class="mitmachen-card__title">Uns unterstützen</h3>
-            <p class="mitmachen-card__text">
-              Mit einer Spende ermöglichen Sie unsere politische Arbeit
-              vor Ort: Veranstaltungen, Bürgergespräche und Wahlkampf für
-              eine starke CDU im Enzkreis und in Pforzheim.
-            </p>
+            <p class="mitmachen-card__text">Mit einer Spende ermöglichen Sie unsere politische Arbeit vor Ort: Veranstaltungen, Bürgergespräche und Wahlkampf für eine starke CDU im Enzkreis und in Pforzheim.</p>
             <!-- STAFF UPDATE: Spendenlink anpassen -->
-            <a href="#kontakt" class="btn btn--white btn--lg">Jetzt spenden</a>
+            <a href="#kontakt" class="btn btn--outline btn--lg">Jetzt spenden</a>
           </div>
-
         </div>
 
       </div>
     </section>
 
 
-    <!-- ═══════════════════════════════════════════
-         KONTAKT
-         ═══════════════════════════════════════════ -->
-    <section id="kontakt" class="section bg-white" aria-labelledby="kontakt-heading">
+    <!-- ═══ KONTAKT ═══ -->
+    <section id="kontakt" class="section" aria-labelledby="kontakt-heading">
       <div class="container">
 
         <div class="section-header">
@@ -596,90 +468,46 @@
 
         <div class="kontakt-layout">
 
-          <!-- Kontaktinfos -->
-          <!-- STAFF UPDATE: Adresse, Telefon, E-Mail und Öffnungszeiten aktualisieren -->
+          <!-- STAFF UPDATE: Adresse, Telefon, E-Mail, Öffnungszeiten aktualisieren -->
           <div>
             <h3 class="kontakt-info__title">CDU Kreisgeschäftsstelle</h3>
-
             <div class="kontakt-info__block">
               <span class="kontakt-info__label">Adresse</span>
-              <p class="kontakt-info__text">
-                Musterstraße 1<br>
-                75175 Pforzheim
-              </p>
+              <p class="kontakt-info__text">Musterstraße 1<br>75175 Pforzheim</p>
             </div>
-
             <div class="kontakt-info__block">
               <span class="kontakt-info__label">Erreichbarkeit</span>
-              <p class="kontakt-info__text">
-                Mo – Fr: 9:00 – 17:00 Uhr
-              </p>
+              <p class="kontakt-info__text">Mo – Fr: 9:00 – 17:00 Uhr</p>
             </div>
-
             <div class="kontakt-info__block">
               <span class="kontakt-info__label">Telefon</span>
-              <p class="kontakt-info__text">
-                <a href="tel:+4972310000000">07231 000000</a>
-              </p>
+              <p class="kontakt-info__text"><a href="tel:+4972310000000">07231 000000</a></p>
             </div>
-
             <div class="kontakt-info__block">
               <span class="kontakt-info__label">E-Mail</span>
-              <p class="kontakt-info__text">
-                <a href="mailto:info@cdu-enzkreis.de">info@cdu-enzkreis.de</a>
-              </p>
+              <p class="kontakt-info__text"><a href="mailto:info@cdu-enzkreis.de">info@cdu-enzkreis.de</a></p>
             </div>
           </div>
 
-          <!-- Kontaktformular -->
           <div class="kontakt-form">
             <h3 class="kontakt-form__title">Schreiben Sie uns</h3>
-            <!-- STAFF UPDATE: action="" mit korrekter Backend-URL oder Formular-Dienst befüllen -->
+            <!-- STAFF UPDATE: action="" mit Backend-URL befüllen -->
             <form action="#" method="POST" novalidate>
               <div class="form-group">
                 <label class="form-label" for="kontakt-name">Name <span aria-hidden="true">*</span></label>
-                <input
-                  type="text"
-                  id="kontakt-name"
-                  name="name"
-                  class="form-control"
-                  required
-                  autocomplete="name"
-                  aria-required="true"
-                >
+                <input type="text" id="kontakt-name" name="name" class="form-control" required autocomplete="name" aria-required="true">
               </div>
               <div class="form-group">
                 <label class="form-label" for="kontakt-email">E-Mail <span aria-hidden="true">*</span></label>
-                <input
-                  type="email"
-                  id="kontakt-email"
-                  name="email"
-                  class="form-control"
-                  required
-                  autocomplete="email"
-                  aria-required="true"
-                >
+                <input type="email" id="kontakt-email" name="email" class="form-control" required autocomplete="email" aria-required="true">
               </div>
               <div class="form-group">
                 <label class="form-label" for="kontakt-betreff">Betreff</label>
-                <input
-                  type="text"
-                  id="kontakt-betreff"
-                  name="subject"
-                  class="form-control"
-                  autocomplete="off"
-                >
+                <input type="text" id="kontakt-betreff" name="subject" class="form-control">
               </div>
               <div class="form-group">
                 <label class="form-label" for="kontakt-nachricht">Nachricht <span aria-hidden="true">*</span></label>
-                <textarea
-                  id="kontakt-nachricht"
-                  name="message"
-                  class="form-control"
-                  rows="5"
-                  required
-                  aria-required="true"
-                ></textarea>
+                <textarea id="kontakt-nachricht" name="message" class="form-control" rows="5" required aria-required="true"></textarea>
               </div>
               <button type="submit" class="btn btn--primary btn--lg">Nachricht senden</button>
             </form>
@@ -693,34 +521,27 @@
   </main>
 
 
-  <!-- ═══════════════════════════════════════════
-       FOOTER
-       ═══════════════════════════════════════════ -->
+  <!-- ═══ FOOTER ═══ -->
   <footer class="site-footer" role="contentinfo">
     <div class="container">
 
       <div class="footer-main">
 
-        <!-- Brand + Social -->
         <div class="footer-brand">
           <a href="/" class="footer-brand__logo" aria-label="CDU Enzkreis Pforzheim – Startseite">
             <span class="footer-brand__cdu">CDU</span>
             <span class="footer-brand__region">Enzkreis<br>Pforzheim</span>
           </a>
-          <p class="footer-brand__tagline">
-            Gemeinsam für unsere Heimat.<br>
-            Stark im Enzkreis und in Pforzheim.
-          </p>
+          <p class="footer-brand__tagline">Gemeinsam für unsere Heimat.<br>Stark im Enzkreis und in Pforzheim.</p>
           <!-- STAFF UPDATE: Social-Media-Links anpassen -->
           <nav class="footer-social" aria-label="Social Media">
-            <a href="#" class="footer-social__link" aria-label="CDU Enzkreis auf Facebook">f</a>
-            <a href="#" class="footer-social__link" aria-label="CDU Enzkreis auf Instagram">📷</a>
-            <a href="#" class="footer-social__link" aria-label="CDU Enzkreis auf X (Twitter)">𝕏</a>
-            <a href="#" class="footer-social__link" aria-label="CDU Enzkreis auf YouTube">▶</a>
+            <a href="#" class="footer-social__link" aria-label="Facebook">f</a>
+            <a href="#" class="footer-social__link" aria-label="Instagram">◉</a>
+            <a href="#" class="footer-social__link" aria-label="X">𝕏</a>
+            <a href="#" class="footer-social__link" aria-label="YouTube">▶</a>
           </nav>
         </div>
 
-        <!-- Schnelllinks -->
         <nav aria-label="Schnelllinks">
           <h3 class="footer-col__title">Seiten</h3>
           <ul class="footer-col__links">
@@ -732,7 +553,6 @@
           </ul>
         </nav>
 
-        <!-- Mitmachen -->
         <nav aria-label="Mitmachen">
           <h3 class="footer-col__title">Mitmachen</h3>
           <ul class="footer-col__links">
@@ -744,7 +564,6 @@
           </ul>
         </nav>
 
-        <!-- Rechtliches -->
         <nav aria-label="Rechtliches">
           <h3 class="footer-col__title">Rechtliches</h3>
           <ul class="footer-col__links">
@@ -759,9 +578,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p class="footer-bottom__copy">
-          &copy; 2026 CDU Kreisverband Enzkreis Pforzheim e. V.
-        </p>
+        <p class="footer-bottom__copy">&copy; 2026 CDU Kreisverband Enzkreis Pforzheim e. V.</p>
         <nav class="footer-bottom__legal" aria-label="Rechtliche Links">
           <a href="#">Impressum</a>
           <a href="#">Datenschutz</a>

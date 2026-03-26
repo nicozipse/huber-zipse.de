@@ -4,37 +4,49 @@
    ============================================================ */
 
 :root {
-  /* ─── Brand Colors ─── */
-  --color-primary:        #003880;   /* CDU Blau */
-  --color-primary-dark:   #002660;   /* Hover / Tiefe */
-  --color-primary-light:  #0055B8;   /* Gradient-Endpunkt */
-  --color-accent-teal:    #006B8F;   /* Teal-Akzent / Gradient-Start */
-  --color-cta-gold:       #F5A623;   /* CTA-Buttons Gold/Gelb */
-  --color-cta-gold-dark:  #D4891A;   /* Gold Hover */
+  /* ─── Brand Colors (CDU Teal #52b7c1) ─── */
+  --color-primary:        #52b7c1;   /* CDU Teal – Hauptfarbe */
+  --color-primary-dark:   #3a9ca6;   /* Hover / Tiefe */
+  --color-primary-darker: #2a7d86;   /* Text auf hellem Hintergrund (WCAG) */
+  --color-primary-light:  #7ecfd7;   /* Helle Variante / Gradienten */
+  --color-primary-pale:   #e8f7f9;   /* Sehr heller Teal-Hintergrund */
+  --color-accent-dark:    #1a3a4a;   /* Dunkel-Teal für Footer / Kontrast */
+  --color-accent-mid:     #2a5f72;   /* Mittleres Teal */
+
+  /* Neutrale */
   --color-white:          #FFFFFF;
-  --color-gray-light:     #F5F5F5;   /* Wechselnde Sektionshintergründe */
-  --color-gray-mid:       #E0E0E0;   /* Trennlinien */
-  --color-gray-dark:      #6B6B6B;   /* Sekundärer Text */
-  --color-text:           #1A1A1A;   /* Haupttext */
-  --color-footer-bg:      #0D1B2E;   /* Tiefdunkles Footer-Blau */
+  --color-gray-light:     #F5F7F8;
+  --color-gray-mid:       #D8E4E6;
+  --color-gray-dark:      #5a7a82;
+  --color-text:           #1A2E35;
+  --color-text-muted:     #4a6a72;
+
+  /* Header & Footer */
+  --color-header-bg:      #FFFFFF;
+  --color-footer-bg:      #1a3a4a;
 
   /* ─── Gradienten ─── */
-  --gradient-primary:   linear-gradient(135deg, #006B8F 0%, #003880 100%);
-  --gradient-primary-r: linear-gradient(135deg, #003880 0%, #006B8F 100%);
-  --gradient-hero:      linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.68) 100%);
-  --gradient-section:   linear-gradient(160deg, rgba(0,107,143,0.05) 0%, rgba(0,56,128,0.03) 100%);
+  --gradient-primary:     linear-gradient(135deg, #7ecfd7 0%, #52b7c1 50%, #3a9ca6 100%);
+  --gradient-primary-r:   linear-gradient(135deg, #3a9ca6 0%, #52b7c1 100%);
+  --gradient-hero:        linear-gradient(160deg, rgba(26,58,74,0.88) 0%, rgba(82,183,193,0.45) 100%);
+  --gradient-dark:        linear-gradient(135deg, #1a3a4a 0%, #2a5f72 100%);
+  --gradient-section:     linear-gradient(160deg, rgba(82,183,193,0.06) 0%, rgba(58,156,166,0.02) 100%);
+
+  /* ─── CDU Wiederholungsmuster (kleine CDU-Texte) ─── */
+  --pattern-light:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='44'%3E%3Ctext x='4' y='30' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='800' letter-spacing='1' fill='rgba(82,183,193,0.07)'%3ECDU%3C/text%3E%3C/svg%3E");
+  --pattern-dark:   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='44'%3E%3Ctext x='4' y='30' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='800' letter-spacing='1' fill='rgba(255,255,255,0.06)'%3ECDU%3C/text%3E%3C/svg%3E");
 
   /* ─── Typografie ─── */
   --font-family:           'Inter', system-ui, -apple-system, sans-serif;
-  --font-size-xs:          0.75rem;    /* 12px */
-  --font-size-sm:          0.875rem;   /* 14px */
-  --font-size-base:        1rem;       /* 16px */
-  --font-size-lg:          1.125rem;   /* 18px */
-  --font-size-xl:          1.25rem;    /* 20px */
-  --font-size-2xl:         1.5rem;     /* 24px */
-  --font-size-3xl:         1.875rem;   /* 30px */
-  --font-size-4xl:         2.25rem;    /* 36px */
-  --font-size-5xl:         3rem;       /* 48px */
+  --font-size-xs:          0.75rem;
+  --font-size-sm:          0.875rem;
+  --font-size-base:        1rem;
+  --font-size-lg:          1.125rem;
+  --font-size-xl:          1.25rem;
+  --font-size-2xl:         1.5rem;
+  --font-size-3xl:         1.875rem;
+  --font-size-4xl:         2.25rem;
+  --font-size-5xl:         3rem;
   --font-size-hero:        clamp(2.5rem, 6vw, 4.5rem);
   --font-weight-regular:   400;
   --font-weight-medium:    500;
@@ -45,18 +57,18 @@
   --line-height-base:      1.65;
 
   /* ─── Spacing (8px-Grid) ─── */
-  --space-1:  0.25rem;   /*  4px */
-  --space-2:  0.5rem;    /*  8px */
-  --space-3:  0.75rem;   /* 12px */
-  --space-4:  1rem;      /* 16px */
-  --space-5:  1.25rem;   /* 20px */
-  --space-6:  1.5rem;    /* 24px */
-  --space-8:  2rem;      /* 32px */
-  --space-10: 2.5rem;    /* 40px */
-  --space-12: 3rem;      /* 48px */
-  --space-16: 4rem;      /* 64px */
-  --space-20: 5rem;      /* 80px */
-  --space-24: 6rem;      /* 96px */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
 
   /* ─── Layout ─── */
   --container-max:     1200px;
@@ -64,19 +76,19 @@
   --header-height:     72px;
   --section-padding:   clamp(3.5rem, 7vw, 6rem);
 
-  /* ─── Border-Radius ─── */
-  --radius-sm:   4px;
-  --radius-md:   8px;
-  --radius-lg:   12px;
-  --radius-xl:   16px;
+  /* ─── Border-Radius (eckiger Stil) ─── */
+  --radius-sm:   3px;
+  --radius-md:   6px;
+  --radius-lg:   8px;
+  --radius-xl:   12px;
   --radius-pill: 9999px;
 
   /* ─── Shadows ─── */
-  --shadow-sm:   0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);
-  --shadow-md:   0 4px 12px rgba(0,0,0,0.10), 0 2px 4px rgba(0,0,0,0.06);
-  --shadow-lg:   0 10px 30px rgba(0,0,0,0.14), 0 4px 8px rgba(0,0,0,0.08);
-  --shadow-card: 0 2px 8px rgba(0,56,128,0.08), 0 1px 3px rgba(0,0,0,0.05);
-  --shadow-card-hover: 0 8px 24px rgba(0,56,128,0.15), 0 3px 8px rgba(0,0,0,0.08);
+  --shadow-sm:        0 1px 3px rgba(26,58,74,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md:        0 4px 12px rgba(26,58,74,0.12), 0 2px 4px rgba(0,0,0,0.06);
+  --shadow-lg:        0 10px 30px rgba(26,58,74,0.16), 0 4px 8px rgba(0,0,0,0.08);
+  --shadow-card:      0 2px 8px rgba(82,183,193,0.12), 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-card-hover:0 8px 24px rgba(82,183,193,0.22), 0 3px 8px rgba(0,0,0,0.08);
 
   /* ─── Übergänge ─── */
   --transition-fast: 150ms ease;
@@ -84,7 +96,6 @@
   --transition-slow: 400ms ease;
 
   /* ─── Z-Index ─── */
-  --z-header: 100;
+  --z-header:    100;
   --z-mobile-nav: 90;
-  --z-overlay: 200;
 }
