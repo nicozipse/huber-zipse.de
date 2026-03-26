@@ -361,16 +361,14 @@
 .themen-strip__tile--1 .themen-strip__bg,
 .themen-strip__tile--3 .themen-strip__bg,
 .themen-strip__tile--5 .themen-strip__bg {
-  background-image: url('../assets/images/topic-a.jpg');
-  /* Fallback-Gradient falls Bild fehlt: */
+  background-image: url('../assets/images/topic-a.svg');
   background-color: #3a9ca6;
 }
 
 .themen-strip__tile--2 .themen-strip__bg,
 .themen-strip__tile--4 .themen-strip__bg,
 .themen-strip__tile--6 .themen-strip__bg {
-  background-image: url('../assets/images/topic-b.jpg');
-  /* Fallback-Gradient falls Bild fehlt: */
+  background-image: url('../assets/images/topic-b.svg');
   background-color: #1a3a4a;
 }
 
